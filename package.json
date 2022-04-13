@@ -2,12 +2,13 @@
   "name": "quotes_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Michael Hood",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
