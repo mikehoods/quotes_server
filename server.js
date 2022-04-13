@@ -6,14 +6,13 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const LOGIN = process.env.LOGIN
-const MONGODB_URI = process.env.MONGODB_URI
+const uri = process.env.MONGODB_URI
 const PORT = process.env.PORT || 4000
 const quotesController = require('./controllers/quotes.js')
 
 app.use(cors());
 
-mongoose.connect(MONGODB_URI, 
+mongoose.connect(uri, 
 {})
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.log("Error: ", err.message));
