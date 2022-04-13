@@ -13,12 +13,8 @@ const quotesController = require('./controllers/quotes.js')
 
 app.use(cors());
 
-mongoose.connect(`mongodb+srv://${LOGIN}@cluster0.q3hzh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, {
-    useCreateIndex: true,
-    useFindAndModify: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect(`mongodb+srv://${LOGIN}@cluster0.q3hzh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`, 
+{})
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.log("Error: ", err.message));
 
